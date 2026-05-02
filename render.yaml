@@ -3,7 +3,7 @@ services:
     name: vehicle-maintenance-scheduler
     env: node
     rootDir: vehicle_maintenance_scheduler
-    buildCommand: npm install
+    buildCommand: cd ../logging_middleware && npm install axios dotenv && cd ../vehicle_maintenance_scheduler && npm install
     startCommand: node src/index.js
     envVars:
       - key: PORT
@@ -19,7 +19,7 @@ services:
     name: notification-app-backend
     env: node
     rootDir: notification_app_be
-    buildCommand: npm install
+    buildCommand: cd ../logging_middleware && npm install axios dotenv && cd ../notification_app_be && npm install
     startCommand: node src/index.js
     envVars:
       - key: PORT
