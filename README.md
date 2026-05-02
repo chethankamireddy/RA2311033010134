@@ -49,5 +49,17 @@ node src/index.js
 ```
 - **Endpoint:** `GET /priority-inbox?limit=10`
 
+## Sample Outputs (Screenshots)
+
+### Vehicle Maintenance Scheduler Output
+When making a `POST` request to `/schedule`, the API resolves the Multiple Knapsack Problem and returns the scheduled tasks per depot:
+
+![Scheduler Output Screenshot](scheduler_output.png)
+
+### Notification Priority Inbox Output
+When making a `GET` request to `/priority-inbox?limit=5`, the API ranks notifications by the custom weight-recency score:
+
+![Notification Output Screenshot](notification_output.png)
+
 ## Author
 Chethan Reddy Kamireddy
